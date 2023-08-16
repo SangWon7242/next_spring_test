@@ -1,14 +1,12 @@
 package com.ll.exam.nsp.controller;
 
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 
-@Controller
+@RestController // @RestController = @Controller + @ResponseBody
 public class HomeMainController {
 
   @GetMapping("/hello")
-  @ResponseBody
   public String hello() {
     return "Hello, world!";
   }
